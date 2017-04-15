@@ -11,21 +11,22 @@ export class AppComponent {
 
   properties = [];
 
-  constructor(private http: Http,) { }
+  constructor(private http: Http) { }
 
   getList() {
   this.http.get('https://www.propertyfinder.ae/en/find-broker/ajax/search?page=1')
     .map((res) => res.json())
-        .subscribe(
-            data => {
-                    this.properties = data.data;
-            },
-            err => console.error(err),
-            () => console.log(this.properties)
-        );
-    }
+    .subscribe(
+      data => {
+              this.properties = data.data;
+      },
+      err => console.error(err),
+      () => console.log(this.properties)
+    );
+   }
 
   ngOnInit() {
     this.getList();
   }
+  
 }
