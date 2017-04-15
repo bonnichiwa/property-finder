@@ -1,6 +1,7 @@
 <h1>Property Finder</h1>
-
 <div *ngFor="let property of properties">
-  <p>{{property.name}}</p>
-  <img src="{{property.links.logo}}"/>
+  <pf-carousel 
+    name="{{property.name}}" 
+    logo="{{property.links.logo}}">
+  </pf-carousel>
 </div>

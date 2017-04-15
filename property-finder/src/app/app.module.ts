@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { PfLogoComponent } from './components/pf-logo/pf-logo.component';
 import { PfNameComponent } from './components/pf-name/pf-name.component';
+import { PfCarouselComponent } from './components/pf-carousel/pf-carousel.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PfLogoComponent,
     PfNameComponent,
+    PfCarouselComponent,
   ],
   imports: [
     BrowserModule,

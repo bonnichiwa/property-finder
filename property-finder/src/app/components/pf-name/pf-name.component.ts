@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'pf-name',
@@ -11,5 +11,7 @@ export class PfNameComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  @Input() name:string;
 
 }
