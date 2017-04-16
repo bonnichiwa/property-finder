@@ -1,9 +1,8 @@
 <div class="carousel-container" [ngClass]="{active: index == counter}">
   <div class="carousel-inner">
     <div class="carousel-item">
-      <p>{{index}}</p>
-      <pf-name [name]="name"></pf-name>
       <pf-logo [logo]="logo"></pf-logo>
+      <pf-name [name]="name" [description]="description"></pf-name>
     </div>
   </div>
 </div>

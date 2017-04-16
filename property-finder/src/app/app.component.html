@@ -1,14 +1,26 @@
-<h1>PROPERTY FINDER</h1>
-<a class="carousel-back-button" (click)="slideBack()"> < </a>
-<a class="carousel-forward-button" (click)="slideForward()"> > </a>
-<div class="carousel-container" *ngFor="let property of properties; let i = index;">
-  <pf-carousel 
-    [name]=property.name 
-    [logo]=property.links.logo
-    [index]=i>
-  </pf-carousel>
+<h1>Property Finder Carousel</h1>
+<p>Created by: Bonnie Pham</p>
+<div class="property-finder-container">
+  <div class="property-finder-column">
+    <a class="carousel-back-button" (click)="slideBack()"> < </a>
+  </div>
+  <div class="property-finder-big-column">
+    <div class="carousel-container" *ngFor="let property of properties; let i = index;">
+      <pf-carousel 
+      [logo]=property.links.logo
+      [name]=property.name 
+      [description]=property.description
+      [index]=i>
+      </pf-carousel>
+    </div>
+  </div>
+  <div class="property-finder-column">
+    <a class="carousel-forward-button" (click)="slideForward()"> > </a>
+  </div>
 </div>
-<div class="carousel-changer" *ngFor="let property of properties; let i = index;">
-  <a (click)="changeSlide(i)">x</a>
+<div class="carousel-changer">
+  <div *ngFor="let property of properties; let i = index;">
+    <div class="carousel-changer-selector" (click)="changeSlide(i)"></div>
+  </div>
 </div>
 

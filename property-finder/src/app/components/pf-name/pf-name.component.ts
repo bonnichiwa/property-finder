@@ -13,5 +13,6 @@ export class PfNameComponent implements OnInit {
   }
 
   @Input() name:string;
+  @Input() description:string;
 
 }

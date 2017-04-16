@@ -19,12 +19,11 @@ export class PfCarouselComponent implements OnInit {
 
   ngOnInit() {
     this.counter = 0;  
-
   }
 
   @Input() name:string;
   @Input() logo:string;
+  @Input() description:string;
   @Input() index:number;
-
 
 }
