@@ -7,6 +7,6 @@ h1 {
 .active {
   display: block;
 }
-.carousel-back-button:hover, .carousel-forward-button:hover {
+a:hover {
   cursor: pointer;
 }

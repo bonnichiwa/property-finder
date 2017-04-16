@@ -49,5 +49,10 @@ export class AppComponent {
     }
     this.counterService.updateCounter(this.counter);
   }
+
+  changeSlide(index) {
+    this.counter = index;
+    this.counterService.updateCounter(this.counter);
+  }
   
 }
