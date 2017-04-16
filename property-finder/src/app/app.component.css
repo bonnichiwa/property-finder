@@ -71,3 +71,28 @@ p {
   cursor: pointer;
   background-color: #eee;
 }
+.property-finder-mobile-menu {
+    display: none;
+  }
+@media (max-width:991px) {
+  .property-finder-column {
+    display: none;
+  }
+  .property-finder-big-column {
+    display: block;
+    width: 100%;
+  }
+  .property-finder-column-mobile {
+    display: inline-block;
+  }
+  .property-finder-mobile-menu {
+    display: inline-block;
+  }
+  .carousel-back-button, .carousel-forward-button {
+    margin-bottom: 0;
+    font-size: 1.25em;
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+  }
+}

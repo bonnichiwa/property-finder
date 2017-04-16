@@ -2,12 +2,10 @@
   margin: 0 auto;
   border: 10px solid #eee;
   box-shadow: 5px 5px #ccc;
-  padding: 4em;
+  padding: 3em;
   display: none;
-    transition: opacity 1s ease-out;
-    opacity: 0; 
+  height: 320px;
 }
 .active {
-  opacity: 1;
-    display: block;
+  display: block;
 }
