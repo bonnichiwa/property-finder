@@ -33,12 +33,20 @@ export class AppComponent {
   }
 
   slideBack() {
-    this.counter -= 1;
+    if (this.counter >= 1) {
+      this.counter -= 1;
+    } else {
+      this.counter = this.properties.length - 1;
+    }
     this.counterService.updateCounter(this.counter);
   }
 
   slideForward() {
-    this.counter += 1;
+    if (this.counter >= this.properties.length - 1) {
+      this.counter = 0;
+    } else {
+      this.counter += 1;
+    }
     this.counterService.updateCounter(this.counter);
   }
   
