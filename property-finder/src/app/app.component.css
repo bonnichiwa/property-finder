@@ -71,6 +71,9 @@ p {
   cursor: pointer;
   background-color: #eee;
 }
+.carousel-show-name {
+  transition: 0.5s;
+}
 .property-finder-mobile-menu {
     display: none;
   }

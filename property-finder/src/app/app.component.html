@@ -28,8 +28,9 @@
   </div>
 </div>
 <div class="carousel-changer">
+  <p>Jump to: <span class="carousel-show-name">{{nameHover}}</span></p>
   <div *ngFor="let property of properties; let i = index;">
-    <div class="carousel-changer-selector" (click)="changeSlide(i)"></div>
+    <div class="carousel-changer-selector" (click)="changeSlide(i)" (mouseenter)="showName(property.name)" (mouseleave)="showName('')"></div>
   </div>
 </div>
 

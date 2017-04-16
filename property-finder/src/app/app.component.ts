@@ -14,6 +14,8 @@ export class AppComponent {
 
   counter = 0;
 
+  nameHover:string = '';
+
   constructor(private http: Http, private counterService: CounterService) { }
 
   getList() {
@@ -53,6 +55,10 @@ export class AppComponent {
   changeSlide(index) {
     this.counter = index;
     this.counterService.updateCounter(this.counter);
+  }
+
+  showName(name) {
+    this.nameHover = name;
   }
   
 }
