@@ -1,7 +1,10 @@
-<h1>Property Finder</h1>
-<div *ngFor="let property of properties">
+<h1>PROPERTY FINDER</h1>
+<a class="carousel-back-button" (click)="slideBack()"> < </a>
+<a class="carousel-forward-button" (click)="slideForward()"> > </a>
+<div *ngFor="let property of properties; let i = index;">
   <pf-carousel 
-    name="{{property.name}}" 
-    logo="{{property.links.logo}}">
+    [name]=property.name 
+    [logo]=property.links.logo
+    [index]=i>
   </pf-carousel>
 </div>

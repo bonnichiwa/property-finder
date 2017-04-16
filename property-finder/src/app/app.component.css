@@ -4,3 +4,9 @@
 h1 {
   font-family: 'Roboto', sans-serif;
 }
+.active {
+  display: block;
+}
+.carousel-back-button:hover, .carousel-forward-button:hover {
+  cursor: pointer;
+}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
+import { CounterService } from './services/counter.service';
 import 'rxjs/add/operator/map';
 
 @Component({
@@ -11,7 +12,9 @@ export class AppComponent {
 
   properties = [];
 
-  constructor(private http: Http) { }
+  counter = 0;
+
+  constructor(private http: Http, private counterService: CounterService) { }
 
   getList() {
   this.http.get('https://www.propertyfinder.ae/en/find-broker/ajax/search?page=1')
@@ -27,6 +30,16 @@ export class AppComponent {
 
   ngOnInit() {
     this.getList();
+  }
+
+  slideBack() {
+    this.counter -= 1;
+    this.counterService.updateCounter(this.counter);
+  }
+
+  slideForward() {
+    this.counter += 1;
+    this.counterService.updateCounter(this.counter);
   }
   
 }

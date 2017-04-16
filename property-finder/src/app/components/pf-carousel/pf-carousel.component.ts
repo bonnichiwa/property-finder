@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { CounterService } from '../../services/counter.service';
 
 @Component({
   selector: 'pf-carousel',
@@ -7,12 +8,23 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PfCarouselComponent implements OnInit {
 
-  constructor() { }
+  counter:number;
+
+  constructor(private counterService: CounterService) {
+  counterService.counterChanged$.subscribe(
+    currentCount => {
+      this.counter = currentCount;
+    });
+  }
 
   ngOnInit() {
+    this.counter = 0;  
+
   }
 
   @Input() name:string;
   @Input() logo:string;
+  @Input() index:number;
+
 
 }

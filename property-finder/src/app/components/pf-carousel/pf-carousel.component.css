@@ -3,4 +3,14 @@
   width: 70%;
   margin: 0 auto;
   border: 1px solid #aaa;
+  display: none;
+}
+.active {
+  display: block;
+}
+.carousel-back-button {
+  float: left;
+}
+.carousel-forward-button {
+  float: right;
 }

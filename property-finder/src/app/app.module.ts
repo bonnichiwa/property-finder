@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { PfLogoComponent } from './components/pf-logo/pf-logo.component';
 import { PfNameComponent } from './components/pf-name/pf-name.component';
 import { PfCarouselComponent } from './components/pf-carousel/pf-carousel.component';
+import { CounterService } from './services/counter.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { PfCarouselComponent } from './components/pf-carousel/pf-carousel.compon
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
