@@ -1,12 +1,14 @@
 <h1>PROPERTY FINDER</h1>
 <a class="carousel-back-button" (click)="slideBack()"> < </a>
 <a class="carousel-forward-button" (click)="slideForward()"> > </a>
-<div *ngFor="let property of properties; let i = index;">
+<div class="carousel-container" *ngFor="let property of properties; let i = index;">
   <pf-carousel 
     [name]=property.name 
     [logo]=property.links.logo
     [index]=i>
   </pf-carousel>
+</div>
+<div class="carousel-changer" *ngFor="let property of properties; let i = index;">
   <a (click)="changeSlide(i)">x</a>
 </div>
 
