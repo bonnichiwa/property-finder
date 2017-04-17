@@ -14,6 +14,7 @@ p {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
+  font-size: 14px;
 }
 .active {
   display: block;
@@ -36,7 +37,7 @@ p {
   padding: 10px;
   margin-bottom: 100px;
 }
-.carousel-container {
+.carousel-frame {
   margin-top: 2em;
 }
 .carousel-back-button {
@@ -45,7 +46,7 @@ p {
 .carousel-forward-button {
   float: right;
 }
-.property-finder-big-column {
+#property-finder-big-column {
   display: inline-block;
   width: 60%;
 }
@@ -71,9 +72,6 @@ p {
   cursor: pointer;
   background-color: #eee;
 }
-.carousel-show-name {
-  transition: 0.5s;
-}
 .property-finder-mobile-menu {
     display: none;
   }
@@ -81,7 +79,7 @@ p {
   .property-finder-column {
     display: none;
   }
-  .property-finder-big-column {
+  #property-finder-big-column {
     display: block;
     width: 100%;
   }
@@ -97,5 +95,14 @@ p {
     height: 25px;
     width: 25px;
     padding: 5px;
+  }
+  .carousel-show-indicator {
+    height: 20px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  p {
+    font-size: 12px;
   }
 }

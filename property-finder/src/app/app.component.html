@@ -13,8 +13,8 @@
   <div class="property-finder-column">
     <a class="carousel-back-button" (click)="slideBack()"> < </a>
   </div>
-  <div class="property-finder-big-column">
-    <div class="carousel-container" *ngFor="let property of properties; let i = index;">
+  <div id="property-finder-big-column">
+    <div class="carousel-frame" *ngFor="let property of properties; let i = index;">
       <pf-carousel 
       [logo]=property.links.logo
       [name]=property.name 
@@ -27,10 +27,12 @@
     <a class="carousel-forward-button" (click)="slideForward()"> > </a>
   </div>
 </div>
+<div class="carousel-show-indicator">
+    <p>Jump to: <span id="carousel-show-name">{{nameHover}}</span></p>
+</div>
 <div class="carousel-changer">
-  <p>Jump to: <span class="carousel-show-name">{{nameHover}}</span></p>
   <div *ngFor="let property of properties; let i = index;">
-    <div class="carousel-changer-selector" (click)="changeSlide(i)" (mouseenter)="showName(property.name)" (mouseleave)="showName('')"></div>
+    <div class="carousel-changer-selector" (click)="changeSlide(i)" (mouseenter)="showName(property.name)" (mouseleave)="leaveName('')"></div>
   </div>
 </div>
 
