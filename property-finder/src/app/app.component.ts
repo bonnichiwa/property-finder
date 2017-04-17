@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Http, Headers, RequestOptions } from '@angular/http';
+import { Http, Headers, RequestOptions, Jsonp } from '@angular/http';
 import { CounterService } from './services/counter.service';
 import 'rxjs/add/operator/map';
 
@@ -16,18 +16,18 @@ export class AppComponent {
 
   nameHover:string = '';
 
-  constructor(private http: Http, private counterService: CounterService) { }
+  constructor(private http: Http, private counterService: CounterService, private jsonp: Jsonp) { }
 
   ngOnInit() {
     this.getList();
   }
 
   getList() {
-  this.http.get('https://www.propertyfinder.ae/en/find-broker/ajax/search?page=1')
+  this.http.get('https://www.propertyfinder.ae/en/find-broker/ajax/search?page=1&callback=JSONP_CALLBACK')
   .map((res) => res.json())
   .subscribe(
     data => {
-            this.properties = data.data;
+      this.properties = data.data
     },
     err => console.error(err)
    );
